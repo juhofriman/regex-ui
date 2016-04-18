@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dist": "webpack",
+    "dev-server": "webpack-dev-server --content-base dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juho Friman",
