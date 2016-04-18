@@ -1,0 +1,18 @@
+{
+  "name": "angular2-regex",
+  "version": "0.0.1",
+  "description": "Just a angular 2 thingy",
+  "main": "index.js",
+  "scripts": {
+    "dist": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juho Friman",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.16.0",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.0"
+  }
+}
