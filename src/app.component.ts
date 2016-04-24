@@ -5,5 +5,3 @@ import {Component} from 'angular2/core';
     template: '<h1>Regular expression tester thingy</h1>'
 })
 export class AppComponent { }
-
-console.log("Totan");
