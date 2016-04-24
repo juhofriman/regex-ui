@@ -6,6 +6,11 @@ env:
   global:
     secure: B+nS87szT/WdD/8IZ4wleCceIinkYyNpaujgonJqt3TdokCIs01G1UXWlE1/Nu493nrb0gh488SPy3bP2sTb3NFGXT81Z3QcbcaWzjiXZYAZbL2grIHGG38hJHEdxdUyT3JR6koIPdo0J6XSHwA+3/uI+JGf7OlD7H6+NiY6L+mqT3JOsrs7nzNv1jVUZwqk9fp2U0A0AXzZTEGWgZRN08cd1SI8znj5fmDfuaGWyzSEbtgDCSXfyBf1yhTJMUw771ljQr3VMcmHCNsUQrl4DoHaiKLtkcue62rB7P0Dyf+wlqJq01HN5B+yPOtYR0jUL5SqGq7QQC9o3vONLVVTp0qJBW4YZq3SiXiWRqjrehEZ1EwAHfofq/KlrTEQmvWvsnlFu96NHi2EmCeTF9Ef0PFNH7qxCI/NLlzujIBZ2qJk2AL6mHsS79cff9yFyG022LMH0VwNadKzjKaiOZY3oE5yx7u4cbuOSlufoaW0E7xvUc53Ll/4j4NxNbVewnA85hqWHDI3tPxdtnUqxx4IINAxRg3g0L9xPqPYTg+NUGKdjDcEmDLP3qkUdXrtfcg94HP9uDKNibvFk9qquftgwD9GB23eS4HUkhe1rXyu55a6jjxvwxT7Dmzoy462W7Jx/DeIEG0/tgCupkke2k2+D28xgvou8t7VtfpC0VLFaOA=
 
+before_install:
+  - npm install
+  - npm install -g typings
+  - npm install -g webpack
+
 script: npm run dist
 
 after_success:
