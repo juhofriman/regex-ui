@@ -1,4 +1,6 @@
 import {bootstrap}    from 'angular2/platform/browser';
-import {AppComponent} from './app.component';
+import {AppComponent} from './components/app.component';
+
+require('./style.less');
 
 bootstrap(AppComponent);

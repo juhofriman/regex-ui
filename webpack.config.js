@@ -14,11 +14,12 @@ module.exports = {
     chunkFilename: '[id].chunk.js'
   },
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.less']
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+      { test: /\.ts$/, loader: 'ts-loader' },
+      { test: /\.less$/, loader: "style!css!less" }
     ]
   },
   plugins: [
