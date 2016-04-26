@@ -8,7 +8,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: @color-sandstone;
+  background-color: @color-whitey;
 }
 a {
   color: @color-reddish;
@@ -20,6 +20,40 @@ a {
   color: @color-whitey;
 
   h1 {
+  }
+}
+
+#cheatsheet {
+  font-family: sans-serif;
+  h2 {
+    margin-top:0px;
+  }
+  float:right;
+  width: 30%;
+  font-size: 70%;
+}
+
+#main-container {
+  margin-left: 1em;
+  #regex-input {
+    margin-bottom:1em;
+    input {
+      width: 60%;
+      font-size: 20pt;
+      font-family: Arial;
+      background-color: @color-sandstone;
+    }
+  }
+  #data {
+    font-family: monospace;
+    textarea {
+      resize: none;
+      width: 60%;
+      height: 60%;
+      font-size: 20pt;
+      font-family: Arial;
+      background-color: @color-sandstone;
+    }
   }
 }
 
