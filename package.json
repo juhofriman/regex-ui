@@ -4,7 +4,7 @@
   "description": "Just a angular 2 thingy",
   "main": "index.js",
   "scripts": {
-    "dist": "webpack",
+    "dist": "webpack --display-error-details",
     "dev-server": "webpack-dev-server --content-base dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "typings install"
@@ -12,8 +12,11 @@
   "author": "Juho Friman",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.16.0",
+    "less": "^2.6.1",
     "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
     "webpack": "^1.13.0"
