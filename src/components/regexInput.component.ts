@@ -4,7 +4,7 @@ import {Component} from 'angular2/core';
     selector: 'regex-input',
     template: `
     <div id="regex-input">
-      <input size="40" />
+      <input size="40" value="Try to write angular..."/>
     </div>
 `
 })
