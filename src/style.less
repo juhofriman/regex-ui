@@ -53,8 +53,8 @@ a {
       width: 460px;
       height: 180px;
       position: absolute;
+      letter-spacing: 1px;
       z-index: 1;
-      border: 2px solid #685972;
       background-color: #fff;
       overflow: auto;
       pointer-events: none;
@@ -70,7 +70,6 @@ a {
       position: absolute;
       z-index: 2;
       margin: 0;
-      border: 2px solid #74637f;
       border-radius: 0;
       color: #444;
       background-color: transparent;
@@ -79,13 +78,15 @@ a {
       transition: transform 1s;
     }
     .highlights {
-      padding: 10px;
+      padding: 11px;
       font: 20px/28px 'Open Sans', sans-serif;
       letter-spacing: 1px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
     }
     mark {
       border-radius: 3px;
-      color: transparent;
+      color: #d34a52;
       background-color: #b1d5e5;
     }
   }
