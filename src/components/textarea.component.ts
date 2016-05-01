@@ -1,4 +1,4 @@
-import {Component, ViewChild} from 'angular2/core';
+import {Component, ViewChild, Input} from 'angular2/core';
 
 @Component({
   selector: 'source-backdrop',
@@ -14,8 +14,7 @@ class SourceBackdrop {
   private data: String = '';
 
   set(data) {
-    this.data = data.replace(/\n$/g, '\n\n')
-        .replace(/angular/g, '<mark>$&</mark>');
+    this.data = data;
   }
 }
 
@@ -24,17 +23,35 @@ class SourceBackdrop {
     directives: [SourceBackdrop],
     template: `
     <div id="data">
-      <source-backdrop #backdrop></source-backdrop>
-      <textarea #inputdata (keyup)="handleChange($event, inputdata)"></textarea>
+      <source-backdrop></source-backdrop>
+      <textarea [(ngModel)]=textToMatchTo (keyup)="evaluate()"></textarea>
     </div>
 `
 })
 export class SourceTextarea {
 
+  @Input()
+  private regexString: string = '';
+
+  private textToMatchTo: string = '';
+
   @ViewChild(SourceBackdrop)
   private sourceBackdrop: SourceBackdrop;
 
-  handleChange(e, value) {
-    this.sourceBackdrop.set(value.value);
+  ngOnChanges(changes) {
+    this.evaluate();
   }
+
+  evaluate() {
+    try {
+      let data = this.textToMatchTo.replace(/\n$/g, '\n\n')
+          .replace(new RegExp(this.regexString, 'g'), '<mark>$&</mark>');
+      if(this.sourceBackdrop != null) {
+        this.sourceBackdrop.set(data);
+      }
+    } catch (e) {
+      this.sourceBackdrop.set(this.textToMatchTo);
+    }
+  }
+
 }
