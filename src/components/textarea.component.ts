@@ -11,7 +11,7 @@ import {Component, ViewChild, Input} from 'angular2/core';
 })
 class SourceBackdrop {
 
-  private data: String = 'Paste text to match to here';
+  private data: String = '';
 
   set(data) {
     this.data = data;
