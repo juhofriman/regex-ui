@@ -4,13 +4,41 @@
   </head>
   <body>
     <div id="main-header">
-      <h1>Regular expression tester thingy</h1>
-    </div>
-    <div id="cheatsheet">
-      <h2>Cheatsheet</h2>
-      Here you'll find to the point cheatsheet
+      <h1>Regular expression planner thingy</h1>
     </div>
     <regex-app>Loading...</regex-app>
+    <div id="cheatsheet">
+      <h2>Cheatsheet</h2>
+      <div>
+        <div>
+          <span class="item">Boolean OR:</span> foo|bar
+        </div>
+        <div>
+          <span class="item">Grouping:</span> potat(a|o)
+        </div>
+        <div>
+          <div class="header">Quantification</div>
+          <div>
+            <span class="item">?:</span> zero or one
+          </div>
+          <div>
+            <span class="item">*:</span> zero or more
+          </div>
+          <div>
+            <span class="item">+:</span> one or more
+          </div>
+          <div>
+            <span class="item">{n}:</span> match n times
+          </div>
+          <div>
+            <span class="item">{n,}:</span> match n or more times
+          </div>
+          <div>
+            <span class="item">{n,m}:</span> match n to m times
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="footer">
       <div class="pull-right">
         Code: <a href="https://github.com/juhofriman/regex-ui/">https://github.com/juhofriman/regex-ui/<a>

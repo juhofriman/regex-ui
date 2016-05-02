@@ -5,10 +5,13 @@
 @color-heatmist: #664649;
 @color-whitey: #eeeeef;
 
+@textarea-size-width: 500px;
+@textarea-size-height: 300px;
+
 body {
   padding: 0;
   margin: 0;
-  background-color: @color-whitey;
+  background-color: @color-sandstone;
 }
 a {
   color: @color-reddish;
@@ -16,32 +19,42 @@ a {
 #main-header {
   margin: 0;
   font-family: monospace;
-  background-color: @color-octopus;
-  color: @color-whitey;
+  background-color: @color-reddish;
+  color: @color-octopus;
 
   h1 {
+    text-align: right;
   }
 }
 
 #cheatsheet {
+  padding-top: 10px;
+  padding-left: 10px;
   font-family: sans-serif;
   h2 {
     margin-top:0px;
   }
-  float:right;
   width: 30%;
-  font-size: 70%;
+  font-size: 80%;
+  .header {
+    text-decoration: underline;
+    margin-top:5px;
+    font-size: 120%;
+  }
+  .item {
+    font-weight: bold;
+  }
 }
 
 #main-container {
-  margin-left: 1em;
+  padding-left: 10px;
   #regex-input {
     margin-bottom:1em;
     input {
-      width: 60%;
+      width: @textarea-size-width;
       font-size: 20pt;
       font-family: Arial;
-      background-color: @color-sandstone;
+      background-color: @color-whitey;
     }
   }
   #data {
@@ -50,24 +63,24 @@ a {
     transform: translateZ(0);
     -webkit-text-size-adjust: none;
     .backdrop {
-      width: 460px;
-      height: 300px;
+      width: @textarea-size-width;
+      height: @textarea-size-height;
       position: absolute;
       letter-spacing: 1px;
       z-index: 1;
-      background-color: #fff;
+      background-color: @color-whitey;
       overflow: auto;
       pointer-events: none;
       transition: transform 1s;
     }
     textarea {
-      width: 460px;
-      height: 300px;
+      width: @textarea-size-width;
+      height: @textarea-size-height;
       padding: 10px;
       font: 20px/28px 'Open Sans', sans-serif;
       letter-spacing: 1px;
       display: block;
-      position: absolute;
+
       z-index: 2;
       margin: 0;
       border-radius: 0;
@@ -85,8 +98,7 @@ a {
       word-wrap: break-word;
     }
     mark {
-      border-radius: 3px;
-      color: #d34a52;
+      border-radius: 8px;
       background-color: #b1d5e5;
     }
   }

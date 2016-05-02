@@ -4,7 +4,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
     selector: 'regex-input',
     template: `
     <div id="regex-input">
-      <input #regexstring (keyup)="handleChange($event, regexstring)" size="40" value=""/>
+      <input #regexstring (keyup)="handleChange($event, regexstring)" size="40" placeholder="regex" value=""/>
     </div>
 `
 })

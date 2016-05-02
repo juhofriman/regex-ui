@@ -11,7 +11,7 @@ import {Component, ViewChild, Input} from 'angular2/core';
 })
 class SourceBackdrop {
 
-  private data: String = '';
+  private data: String = 'Paste text to match to here';
 
   set(data) {
     this.data = data;
@@ -24,7 +24,7 @@ class SourceBackdrop {
     template: `
     <div id="data">
       <source-backdrop></source-backdrop>
-      <textarea [(ngModel)]=textToMatchTo (keyup)="evaluate()"></textarea>
+      <textarea [(ngModel)]=textToMatchTo (keyup)="evaluate()" placeholder="text-to-match-to-here"></textarea>
     </div>
 `
 })
