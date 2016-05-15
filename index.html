@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Someday this just might be a great regex testing and planning tool. Or not.</title>
+  </head>
+  <body>
+    <div id="main-header">
+      <h1>Regular expression planner thingy</h1>
+    </div>
+    <regex-app>Loading...</regex-app>
+    <div id="cheatsheet">
+      <h2>Cheatsheet</h2>
+      <div class="panel">
+        <div>
+          <span class="item">Boolean OR:</span> foo|bar
+        </div>
+        <div>
+          <span class="item">Grouping:</span> potat(a|o)
+        </div>
+        <div>
+          <div class="header">Quantification</div>
+          <div>
+            <span class="item">?:</span> zero or one
+          </div>
+          <div>
+            <span class="item">*:</span> zero or more
+          </div>
+          <div>
+            <span class="item">.*?a:</span> zero or more (lazy, anything until first a)
+          </div>
+          <div>
+            <span class="item">+:</span> one or more
+          </div>
+          <div>
+            <span class="item">{n}:</span> match n times
+          </div>
+          <div>
+            <span class="item">{n,}:</span> match n or more times
+          </div>
+          <div>
+            <span class="item">{n,m}:</span> match n to m times
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div>
+          <span class="item">Brackets:</span>
+            <div class="indent">[abc] matches a, b and c</div>
+            <div class="indent">[a-z] lower case letters</div>
+            <div class="indent">[^abc] any character but not a, b and c</div>
+        </div>
+        <div>
+          <span class="item">Special characters:</span>
+          <div class="indent">. matches any character</div>
+          <div class="indent">^ matches beginning of line</div>
+          <div class="indent">$ matches end of line</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div>
+          <div class="header">Character classes</div>
+          <div>
+            <span class="item">\w:</span> [A-Za-z0-9_]
+          </div>
+          <div>
+            <span class="item">\W:</span> [^A-Za-z0-9_]
+          </div>
+          <div>
+            <span class="item">\d:</span> digits
+          </div>
+          <div>
+            <span class="item">\D:</span> non digits
+          </div>
+          <div>
+            <span class="item">\s:</span> whitespaces
+          </div>
+          <div>
+            <span class="item">\S:</span> non whitespaces
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="pull-right">
+        <a href="https://github.com/juhofriman/regex-ui/">https://github.com/juhofriman/regex-ui/<a>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/polyfills.js"></script><script type="text/javascript" src="js/vendor.js"></script><script type="text/javascript" src="js/main.js"></script></body>
+</html>
